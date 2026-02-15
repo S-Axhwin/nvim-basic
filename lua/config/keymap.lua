@@ -9,4 +9,8 @@ vim.keymap.set("n", "<leader>h3", ":lua require('harpoon.ui').nav_file(3)<CR>", 
 vim.keymap.set("n", "<leader>h4", ":lua require('harpoon.ui').nav_file(4)<CR>", { desc = "Go to file 4 in Harpoon" })
 
 
+--- Lazy git
+vim.keymap.set("n", "<leader>gg", function()
+  vim.cmd("LazyGit")
+end, { desc = "Open LazyGit" })
 
