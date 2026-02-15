@@ -14,3 +14,11 @@ vim.keymap.set("n", "<leader>gg", function()
   vim.cmd("LazyGit")
 end, { desc = "Open LazyGit" })
 
+
+-- ESC to close LazyGit terminal window
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*lazygit*",
+  callback = function()
+    vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:q<CR>]], { buffer = true })
+  end,
+})
