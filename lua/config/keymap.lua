@@ -16,3 +16,22 @@ end, { desc = "Open LazyGit" })
 
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:q<CR>]])
 
+
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>Q", ":qa!<CR>")
+
+-- Ctrl+l → next buffer (cycle forward)
+vim.keymap.set("n", "<C-l>", ":bnext<CR>")
+
+-- Ctrl+h → previous buffer (cycle backward)
+vim.keymap.set("n", "<C-h>", ":bprevious<CR>")
+
+-- Move selected lines DOWN with J
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+
+-- Move selected lines UP with K
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Oil
+vim.keymap.set("n", "<leader>e", ":Oil<CR>")
