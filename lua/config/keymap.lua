@@ -35,3 +35,23 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Oil
 vim.keymap.set("n", "<leader>e", ":Oil<CR>")
+
+
+vim.keymap.set("x", "y", '"y',  { noremap = true, silent = true })
+vim.keymap.set("x", "Y", '"+y', { noremap = true, silent = true })
+
+-- Optional: Normal mode whole-line clipboard yank
+vim.keymap.set("n", "Y", '"+yy', { noremap = true, silent = true })
+
+-- Close current buffer
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", { silent = true })
+
+-- Force close buffer
+vim.keymap.set("n", "<leader>bD", ":bd!<CR>", { silent = true })
+
+-- Window navigation with Shift + hjkl
+vim.keymap.set("n", "H", "<C-w>h", { silent = true })
+vim.keymap.set("n", "L", "<C-w>l", { silent = true })
+vim.keymap.set("n", "J", "<C-w>j", { silent = true })
+vim.keymap.set("n", "K", "<C-w>k", { silent = true })
+
