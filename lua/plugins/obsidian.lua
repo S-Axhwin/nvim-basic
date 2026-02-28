@@ -156,8 +156,6 @@ return {
         opts   = { buffer = false, desc = "Toggle checkbox" },
       },
     },
-
-    -- ── UI ──────────────────────────────────────
     ui = {
       enable = true,
       checkboxes = {
